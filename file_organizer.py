@@ -1,12 +1,12 @@
 import os
 import shutil
 
-folder_path = '/home/pug/Downloads'
+#Set the folder path to the files you want to organize
+folder_path = '/home/pug/Downloads' 
 
 for file in os.listdir(folder_path):
     file_path = os.path.join(folder_path, file)
     
-    print('file_path')
     if os.path.isfile(file_path):
         ext = os.path.splitext(file)[1][1:].lower()
 
@@ -16,7 +16,7 @@ for file in os.listdir(folder_path):
             
             shutil.move(file_path, os.path.join(dest_folder, file))
 
-print("Done!")
+print("File Organization Complete!")
 
 
 
